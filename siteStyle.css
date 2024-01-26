@@ -128,8 +128,37 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.journal-container {
+    display: flex;
+}
+
+.journal-navigation {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+    border-right: 2px dashed #00FF00; /* Dashed line */
+}
+
+.journal-content {
+    flex: 4;
+    padding: 20px;
+}
+
+/* Style for the image */
+.journal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Dashed lines across the page */
+.dashed-line {
+    border-top: 2px dashed #00FF00;
+    margin: 20px 0;
+}
+
 footer {
-    padding: 10px;
+    padding: 5px;
     background-color: #222;
     border-top: 2px solid #00FF00;
     display: flex;
