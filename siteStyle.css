@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow-y: scroll;
 }
 
 header {
@@ -33,69 +32,8 @@ nav a {
     border-radius: 5px;
 }
 
-.matrix {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-}
-
-.falling-letters {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-.letter {
-    font-size: 20px;
-    margin: 0 5px;
-    transform-origin: bottom;
-    animation: fall 5s linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-.terminal {
+.content {
     padding: 20px;
-    border: 2px solid #00FF00;
-    border-radius: 10px;
-    background-color: #000;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    overflow: hidden;
-    position: relative;
-}
-
-.text {
-    white-space: pre-wrap;
-    font-size: 18px;
-    line-height: 1.5;
-    animation: blinkCursor 1s infinite, staticEffect 0.2s alternate-reverse infinite;
-}
-
-@keyframes blinkCursor {
-    0%, 100% {
-        border-right: 2px solid #00FF00;
-    }
-    50% {
-        border-right: 2px solid transparent;
-    }
-}
-
-@keyframes staticEffect {
-    0% {
-        filter: none;
-    }
-    100% {
-        filter: noise(0.3) blur(0.5px);
-    }
 }
 
 footer {
@@ -115,4 +53,34 @@ footer a {
 
 footer a:hover {
     border-bottom: 2px solid #00FF00;
+}
+
+/* Additional styles for the Journal page */
+.journal-container {
+    display: flex;
+}
+
+.journal-navigation {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+    border-right: 2px dashed #00FF00; /* Dashed line */
+}
+
+.journal-content {
+    flex: 4;
+    padding: 20px;
+}
+
+/* Style for the image */
+.journal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Dashed lines across the page */
+.dashed-line {
+    border-top: 2px dashed #00FF00;
+    margin: 20px 0;
 }

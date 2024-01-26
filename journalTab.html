@@ -5,48 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal</title>
     <link rel="stylesheet" href="siteStyle.css">
+    <style>
+        .journal-container {
+            display: flex;
+        }
+
+        .journal-navigation {
+            flex: 1;
+            padding: 20px;
+            background-color: #222;
+            border-right: 2px dashed #00FF00;
+        }
+
+        .journal-content {
+            flex: 4;
+            padding: 20px;
+        }
+
+        .journal-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .dashed-line {
+            border-top: 2px dashed #00FF00;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="MainPage.html">Home</a>
-            <a href="aboutTab.html">About</a>
-            <a href="contactTab.html">Contact</a>
-            <a href="journalTab.html">Journal</a>
-            <a href="CVTab.html">CV</a>
-            
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="journal.html">Journal</a>
+            <a href="cv.html">CV</a>
         </nav>
     </header>
+           <div class="content">
+        <h2>Journal</h2>
 
-    <div class="tabs">
-        <a href="#week1">Week 1</a>
-        <a href="#week2">Week 2</a>
-        <a href="#week3">Week 3</a>
-        <a href="#week4">Week 4</a>
-        <a href="#week5">Week 5</a>
-        <a href="#week6">Week 6</a>
-        <a href="#week7">Week 7</a>
-        <a href="#week8">Week 8</a>
-    </div>
+        <div class="journal-container">
+            <div class="journal-navigation">
+                <h3>Weeks</h3>
+                <ul>
+                    <li><a href="#week1">Week 1</a></li>
+                    <li><a href="#week2">Week 2</a></li>    
+                    <li><a href="#week3">Week 3</a></li>   
+                    <li><a href="#week4">Week 4</a></li>   
+                    <li><a href="#week5">Week 5</a></li> 
+                    <li><a href="#week6">Week 6</a></li>   
+                    <li><a href="#week7">Week 7</a></li> 
+                    <li><a href="#week8">Week 8</a></li> 
+                </ul>
+            </div>
 
-    <div class="content">
-        <div id="week1" class="entry">
-            <h2>Week 1</h2>
-            <h3>Entry 1</h3>
-            <p>
-                week 1 intro to JavaScript (Js).
-            </p>
+            <div class="journal-content">
+                <div class="dashed-line"></div>
+
+                <h3 id="week1">Week 1</h3>
+
+                <!-- Area for an image -->
+                <img src="skull.png" alt="Week 1 Image">
+
+                <!-- Area for the body of text -->
+                <p>This is the body of text for Week 1. You can add your content here.</p>
+
+                <div class="dashed-line"></div>
+            </div>
         </div>
-
-        <div id="week2" class="entry">
-            <h2>Week 2</h2>
-            <h3>Entry 1</h3>
-            <p>
-                hey this is tempoary text
-            </p>
-        </div>
-
-        
     </div>
 
     <footer>
