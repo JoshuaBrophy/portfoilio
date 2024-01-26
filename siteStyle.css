@@ -10,6 +10,18 @@ body {
     height: 100vh;
 }
 
+body {
+    background-color: #000;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow-y: scroll; /* Add a basic vertical scrollbar for vertical overflow */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 header {
     padding: 10px;
     background-color: #222;
@@ -23,10 +35,6 @@ nav {
     display: flex;
 }
 
-body {
-    overflow-y: scroll;
-}
-
 nav a {
     color: #00FF00;
     text-decoration: none;
@@ -34,16 +42,90 @@ nav a {
     margin: 0 10px;
     border: 1px solid #00FF00;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-nav a:hover {
-    background-color: #00FF00;
-    color: #000000;
+.matrix-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
 }
 
-.content {
+.falling-letters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.matrix {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.falling-letters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.letter {
+    font-size: 20px;
+    margin: 0 5px;
+    transform-origin: bottom;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.terminal {
     padding: 20px;
+    border: 2px solid #00FF00;
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 24px; 
+    margin: 0; 
+}
+
+.text {
+    white-space: pre-wrap;
+    font-size: 18px;
+    line-height: 1.5;
+    animation: blinkCursor 0.5s infinite, staticEffect 0.1s alternate-reverse infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% {
+        border-right: 2px solid #00FF00;
+    }
+    50% {
+        border-right: 2px solid transparent;
+    }
+}
+
+@keyframes staticEffect {
+    0% {
+        filter: none;
+    }
+    100% {
+        filter: noise(1.3) blur(1.5px);
+    }
 }
 
 footer {
@@ -63,33 +145,4 @@ footer a {
 
 footer a:hover {
     border-bottom: 2px solid #00FF00;
-}
-
-.matrix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.falling-letters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-size: 2em;
-}
-
-.letter {
-    opacity: 0.8;
-    animation: fall 5s linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
 }
