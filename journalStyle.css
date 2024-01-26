@@ -55,5 +55,29 @@ footer a:hover {
     border-bottom: 2px solid #00FF00;
 }
 
+.journal-container {
+    display: flex;
+}
 
+.journal-navigation {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+    border-right: 2px dashed #00FF00;
+}
 
+.journal-content {
+    flex: 4;
+    padding: 20px;
+}
+
+.journal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.dashed-line {
+    border-top: 2px dashed #00FF00;
+    margin: 20px 0;
+}
